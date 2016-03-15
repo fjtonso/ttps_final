@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 //import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
+import src.main.java.translator.MenuTranslator;
 import beans.Menu;
 import beans.Componente;
 import daos.MenuDAO;
@@ -30,6 +31,9 @@ public class MenuController {
 	
 	@Autowired
     private MenuDAO menuDAO;
+	
+	@Autowired
+    private MenuTranslator menuTranslator;
 	
 	@Autowired
 	private ComponenteDAO componenteDAO;
@@ -82,16 +86,16 @@ public class MenuController {
 	    }
 	
 	@RequestMapping(value="guardarMenu",method=RequestMethod.POST)
-    public ModelAndView alta(@ModelAttribute("menu")   MenuDTO  menu,BindingResult result,Model model) {
+    public ModelAndView alta(@ModelAttribute("menu")   MenuDTO  menuDTO,BindingResult result,Model model) {
     	// Si el id del menu es 0 entonces se crea el menu de lo contrario se actualiza 
-        if(menu.getId() == null){  
-        	this.getMenuDAO().guardar(menu);
+        if(menu.getId() == null){        	
+        	this.getMenuDAO().guardar(menuTranslator.translate(menuDTO));
         } else {
-        	this.getMenuDAO().actualizar(menu);
+        	this.getMenuDAO().actualizar(menuTranslator.translate(menuDTO));
         }
         List<Menu> menuList = this.getMenuDAO().listar();
         return new ModelAndView("administrarMenues", "menuList", menuList);
-    }
+    }	
 	
 	@RequestMapping("borrarMenu")
     public ModelAndView baja(@RequestParam long id) {
