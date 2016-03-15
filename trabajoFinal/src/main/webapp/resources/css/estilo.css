@@ -1,0 +1,256 @@
+@CHARSET "ISO-8859-1";
+body.error{  
+background-repeat: no-repeat; 
+background-size: 30%; 
+} 
+#titulo {
+	margin: 5px;
+	font-size: 15px;
+	}
+
+label {margin: 5px}
+
+input {
+	margin: 5px;
+}
+
+span.date{
+	color: white;
+	margin-left: 0.5%;
+	margin-top: 10%;
+	background-color: Blue;
+    border-bottom: 2px solid #666666;
+    border-left: 2px solid #666666;
+    border-right: 2px solid #666666; 
+}
+.relleno{
+	background-color: Blue;
+}
+#imagen {
+	float: right;
+	margin-right: 70px;
+	}
+	
+.usuario{
+	float: right;
+	margin-right: 20%;
+}
+
+/* MENÚ */
+div.barranav{
+	background-color:blue;
+	overflow: hidden;
+}
+nav li.barra{
+	display: inline-block;
+	border-right: 1.5px solid #F5F5F5;
+	padding-right: 5px;
+	
+}
+body{
+	background-color: #CCEBFF;
+	margin-top: 12%;
+	margin-bottom:10%;
+}
+nav li a{
+	display:block;
+	font-size: 100%; 	
+	color: white;
+	background-color: blue;
+	text-align: left;
+}
+#header {
+		
+	width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	
+}
+/*    FIN DEL MENÚ        */
+/*    TABLA DE LISTADO */
+table.tabla {
+    background-color: #FFFFFF;
+    /* border-collapse: collapse; /* sacando esto queda separado*/
+    font-family: "Arial,Helvetica,verdana sans-serif";
+    font-size: 0.9em;
+    width: 100%;
+	margin-bottom: 1%;
+	display: inline-block; /* sacando esto queda centrado expandido*/
+}
+thead th.th {
+    background-color: blue;
+    border-right: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-weight: normal;
+    height: 25px;
+    padding: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+tbody tr.tr {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #F0F0F0;
+}
+tbody td.td {
+    color: #414141;
+    padding: 5px;
+    text-align: left;
+}
+/*    FIN DE TABLA DE LISTADO*/
+tbody td.alerta{
+	color: red;
+    padding: 5px;
+    text-align: left;
+}
+
+/* ERROR*/
+.imgerror{
+	width: 35%;
+	float: left;
+}
+.errores{
+	font-size: 1em;
+	color: red;
+}
+div.error{
+	width: 40%;
+	float: right;
+	margin-right: 200px;
+}
+p.titulo{
+	font-size: 5em;
+	font-family: Arial;
+	color: blue;
+	text-align: center;
+}
+p.cuerpo{
+	font-size: 1em;
+	font-family: Arial;
+	color: blue;
+	
+}
+/* FIN ERROR */
+
+/*  modificado */
+li a:hover{
+	color: gold;
+}
+footer {
+	background: blue;	
+	text-align: center;
+	color: white;
+	position:fixed;
+    left:0px;
+    bottom:0px;
+	width:100%;
+}	
+.imagenprincipal {
+	width: 70%;
+	float: right;
+	margin: 2px 200px 0px 0px;
+	
+}	
+.contenedor{
+	width: 100%;
+	max-width: 1600px;
+	margin:0 auto;
+	overflow:hidden;
+}
+header { 
+	width: 100%;
+	color: white; 
+	background-color: Blue;
+	}
+.logo {
+	width:15%;
+	margin-top: 10px;
+	margin-left: 30px;
+	}	
+.login {
+	float: right;
+	margin-right: 80px;
+	
+	
+	}
+	
+#afterfloat {
+	clear: both;
+}
+
+div#map_canvas {
+margin-top: 3%;
+width: 50%;
+height: 400px;
+position: relative;
+overflow: hidden;
+transform: translateZ(0px);
+background-color: rgb(229, 227, 223);
+}	
+	
+@media screen and (max-width: 900px) {
+	.imagenprincipal{
+		margin: 2px 100px 0px 0px;	
+	}
+	p.titulo{
+		font-size: 2em;
+	}
+	p.cuerpo{
+		font-size: 0.6em;
+	}
+	div.error{
+		margin-right: 100px;
+	}
+}
+@media screen and (max-width: 700px) {
+	.imagenprincipal{
+		visibility: hidden;
+		display:none;
+	}
+	.logo {
+		visibility: hidden;
+		display:none;
+	}	
+	
+	.login {
+		margin-right: 30px;
+		margin-top:0%;
+	}
+	
+	table.tabla {
+		background-color: #FFFFFF;
+		font-family: "Arial,Helvetica,verdana sans-serif";
+		font-size: 0.7em;
+		width: 100%;
+	}
+	
+
+}
+@media screen and (max-width: 500px) {	
+	table.tabla {
+		background-color: #FFFFFF;
+		font-family: "Arial,Helvetica,verdana sans-serif";
+		font-size: 0.5em;
+		width: 100%;
+	}
+	.imgerror{
+		visibility: hidden;
+		display:none;
+	}
+}
+a.boton{
+	font-size: 100%; 	
+	color: white;
+	text-decoration:none;
+	padding: 4px; 
+	background-color: blue;
+	border-top: 1px solid #cccccc;
+    border-bottom: 2px solid #666666;
+    border-left: 1px solid #cccccc;
+    border-right: 2px solid #666666; 
+}
+a.boton:hover{
+	border-top: 1px solid #666666;
+    border-bottom: 2px solid #cccccc;
+    border-left: 1px solid #666666;
+    border-right: 2px solid #cccccc;
+}
