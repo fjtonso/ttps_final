@@ -17,11 +17,11 @@ public class MenuTranslator {
 		menu.setMiercoles(menuDTO.isMiercoles());
 		menu.setJueves(menuDTO.isJueves());
 		menu.setViernes(menuDTO.isViernes());
-		menu.setBebida(componenteDAO.buscar(menuDTO.getBebida()));
-		menu.setCartilla(componenteDAO.buscar(menuDTO.getCartilla()));
-		menu.setPlatoPrincipal(componenteDAO.buscar(menuDTO.getPlatoPrincipal()));
-		menu.setPostre(componenteDAO.buscar(menuDTO.getPostre()))
-		menu.setEntrada(componenteDAO.buscar(menuDTO.getEntrada()));
+		menu.setBebida(componenteDAO.buscar(Long.parseLong(menuDTO.getBebida(), 36)));
+		menu.setCartilla(componenteDAO.buscar(Long.parseLong(menuDTO.getCartilla(), 36)));
+		menu.setPlatoPrincipal(componenteDAO.buscar(Long.parseLong(menuDTO.getPlatoPrincipal(), 36)));
+		menu.setPostre(componenteDAO.buscar(Long.parseLong(menuDTO.getPostre(), 36))):
+		menu.setEntrada(componenteDAO.buscar(Long.parseLong(menuDTO.getEntrada(), 36)));	
 	}
 	
 }

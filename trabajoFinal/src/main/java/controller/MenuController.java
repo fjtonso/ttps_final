@@ -88,7 +88,7 @@ public class MenuController {
 	@RequestMapping(value="guardarMenu",method=RequestMethod.POST)
     public ModelAndView alta(@ModelAttribute("menu")   MenuDTO  menuDTO,BindingResult result,Model model) {
     	// Si el id del menu es 0 entonces se crea el menu de lo contrario se actualiza 
-        if(menu.getId() == null){        	
+        if(menuDTO.getId() == null){        	
         	this.getMenuDAO().guardar(menuTranslator.translate(menuDTO));
         } else {
         	this.getMenuDAO().actualizar(menuTranslator.translate(menuDTO));
